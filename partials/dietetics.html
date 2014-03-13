@@ -1,0 +1,39 @@
+<div class="col-sm-12">
+	<div class="col-sm-12 centered">
+		<h2>Dietetics & Pain Log2</h2>
+	</div>
+
+	<div ng-include src="painGraphURL"></div>
+
+	<ul class="columnHeader">
+		<li>
+			<div class="col-sm-2">Date</div>
+			<div class="col-sm-1">Pain</div>	
+			<div class="col-sm-3">Breakfast</div>
+			<div class="col-sm-3">Lunch</div>
+			<div class="col-sm-3">Dinner</div>
+		</li><div class="clear"></div>
+	</ul>
+	<ul>
+		<li>
+			<div class="col-sm-2">Today <a href="#">Save</a></div>
+			<div class="col-sm-1"><input type="text" name="date" placeholder="1-10"></div>	
+			<div class="col-sm-3"><input type="text" name="breakfast" placeholder="breakfast items"></div>
+			<div class="col-sm-3"><input type="text" name="lunch" placeholder="lunch items"></div>
+			<div class="col-sm-3"><input type="text" name="dinner" placeholder="dinner items"></div>
+		</li><div class="clear"></div>
+		<hr/>
+	</ul>
+	<span class="prompt">Click below date to edit</span>
+	<ul ng-repeat="info in patient">
+		<li ng-repeat="log in info.foodPainLog">
+			<div class="col-sm-2"><a href="#">{{log.date}}</a></div>
+			<div class="col-sm-1"><span class="revealSmall">Pain Rating: </span>{{log.rating}}</div>	
+			<div class="col-sm-3"><span class="revealSmall">Breakfast: </span>{{log.breakfast}}</div>	
+			<div class="col-sm-3"><span class="revealSmall">Lunch: </span>{{log.lunch}}</div>
+			<div class="col-sm-3"><span class="revealSmall">Dinner: </span>{{log.dinner}}</div>
+			<div class="clear"></div>
+		</li>
+	</ul>
+</div><!--col=md-12-->
+<div class="clear"></div>

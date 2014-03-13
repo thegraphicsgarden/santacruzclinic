@@ -1,0 +1,42 @@
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Santa Cruz Clinic</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="#/about">About</a></li>
+        <li class="dropdown">
+          <a href="#/treatments" class="dropdown-toggle" data-toggle="dropdown">Treatments <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/acupuncture">Acupuncture</a></li>
+            <li><a href="#/tuinda">Tuina Message</a></li>
+            <li><a href="#/herbs">Herbs</a></li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Nav header</li>
+            <li><a href="#">Separated link</a></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        <li><a href="#/video">Video</a></li>
+        <li><a href="#/contact">Contact</a></li>
+        <li><a href="#/login" ng-hide="loggedIn">Login</a></li>
+        <li><a href="#/signup" ng-hide="loggedIn">Sign Up</a></li>
+        <li><a href="#/logout" ng-show="loggedIn">Logout</a></li>
+        <li><a href="#/dashboard" ng-show="loggedIn">Dashboard</a></li>
+      </ul>
+      <form class="navbar-form navbar-right" style="display: none;">
+        <ul class="nav navbar-nav">
+        </ul>
+        <div class="form-group" style="display: none;">
+          <input type="text" placeholder="ie Spa, Cosmetc" class="form-control">
+        </div>
+        <button style="display: none;" type="submit" class="btn btn-success">Search</button>
+      </form>
+    </div><!--/.nav-collapse -->
+  </div><!--container-->

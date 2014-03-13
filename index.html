@@ -1,0 +1,56 @@
+<html ng-app="website">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="spa, acupuncture, santa cruz">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Santa Cruz Clinic</title>
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="./css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/dashboard.css">
+	<link rel="stylesheet" type="text/css" href="./css/contact.css">
+
+	<!-- Custom styles for this template -->
+    <link href="./css/theme.css" rel="stylesheet">
+    <link href="./css/secondary.css" rel="stylesheet">
+    <link ng-repeat="stylesheet in stylesheets" ng-href="{{stylesheet.href}}" type="{{stylesheet.type}}" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,300italic' rel='stylesheet' type='text/css'>
+</head>
+
+<body ng-controller="AppCtrl">
+	<!-- Fixed navbar -->
+    <div ng-include src="navURL" class="navbar navbar-inverse navbar-fixed-top" role="navigation"></div>
+		
+	<div ng-view></div>
+
+	<div ng-include src="footerURL"></div>
+
+
+	<!--Jquery scripts-->
+	<!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+	
+	<!--Angular scripts-->
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0-rc.2/angular-animate.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.10.3/TweenMax.min.js"></script>
+
+	<!--D3 scripts-->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+
+	<!-- Theme Scripts -->
+	<script type="text/javascript" src="js/app.js"></script>
+	<!--<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript" src="js/homeSlider.js"></script>
+	<script type="text/javascript" src="js/directives/slider.js"></script>-->
+
+	<!--controller-->
+	<script type="text/javascript" src="js/controllers/app.js"></script>
+	<script type="text/javascript" src="js/controllers/slides.js"></script>
+</body>
+</html>

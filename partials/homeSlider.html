@@ -1,0 +1,95 @@
+    <div ng-app="SliderApp" style="height: 600px;">
+        <div ng-controller="MainCtrl" style="padding-top: 300px; height: 600px;">
+            <div class="container slider">
+                <div class="container slider">
+                    <img ng-repeat="slide in slides" class="slide"
+                        ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}" style="width: 200px;">
+                    <nav class="nav">
+                        <div class="wrapper">
+                            <ul class="dots">
+                                <li class="dot" ng-repeat="slide in slides">
+                                    <a href="#" ng-class="{'active':isCurrentSlideIndex($index)}"
+                                      ng-click="setCurrentSlideIndex($index);">{{slide.description}}</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="bkg" style="display: none; height: 600px;">
+        <div class="container slide active fadeInElement" data-backgroundImage="1" style="height: 600px;">
+            <div class="row">
+             <div class="col-md-12" data-homeSlideTitle="1">
+                 <h1>Relax, Rejuvinate & Heal</h1>
+                 <h3>Spa, Acupuncture, Tuina Message, Herbal Remedies, Retreat</h3>
+                 <button type="button" class="btn btn-primary sliderButton">Make An Apointment</button>
+             </div>
+         </div><!--row-->
+     </div><!--container-->
+     <div class="container slide" data-backgroundImage="2">
+        <div class="row">
+            <div class="col-md-12" data-homeSlideTitle="2">
+                <h1>Acupuncture</h1>
+                <h3>Spa, Acupuncture, Tuina Message, Herbal Remedies, Retreat</h3>
+                <button type="button" class="btn btn-primary sliderButton">Make An Apointment</button>
+            </div>
+        </div><!--row-->
+    </div><!--container-->
+    <div class="container slide" data-backgroundImage="3">
+       <div class="row">
+        <div class="col-md-12" data-homeSlideTitle="3">
+            <h1>Tuina Message</h1>
+            <h3>The Power of Touch</h3>
+            <button type="button" class="btn btn-primary sliderButton">Learn More</button>
+        </div>
+    </div><!--row-->
+</div><!--container--> 
+<div class="container slide" data-backgroundImage="4">
+   <div class="row">
+    <div class="col-md-12" data-homeSlideTitle="4">
+        <h1>Cupping</h1>
+        <h3>The Power of Touch</h3>
+        <button type="button" class="btn btn-primary sliderButton">Learn More</button>
+    </div>
+</div><!--row-->
+</div><!--container--> 
+<div class="container slide" data-backgroundImage="5">
+   <div class="row">
+    <div class="col-md-12" data-homeSlideTitle="5">
+        <h1>Moxa</h1>
+        <h3>The Power of Touch</h3>
+        <button type="button" class="btn btn-primary sliderButton">Learn More</button>
+    </div>
+</div><!--row-->
+</div><!--container-->            
+</div><!--bkg-->  
+
+<div class="sliderNav" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 centered">
+                <a class="active" data-slideNum="1"><img src="./img/slide-bullet-active.png" /></a>
+                <a class="" data-slideNum="2"><img src="./img/slide-bullet-null.png" /></a>
+                <a class="" data-slideNum="3"><img src="./img/slide-bullet-null.png" /></a>
+                <a class="" data-slideNum="4"><img src="./img/slide-bullet-null.png" /></a>
+                <a class="" data-slideNum="5"><img src="./img/slide-bullet-null.png" /></a>
+            </div>
+        </div><!--row-->       
+    </div><!--container-->          
+</div><!--sliderNav-->

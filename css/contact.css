@@ -1,0 +1,10 @@
+.contact label {
+  width: 100px; }
+.contact textarea {
+  width: 100%;
+  min-height: 300px; }
+.contact .col-md-6 h2, .contact .col-md-6 p#emailAddress {
+  margin: 0 auto; }
+.contact img#headshot {
+  width: 100%;
+  border: 1px rgba(0, 0, 0, 0.2) solid; }

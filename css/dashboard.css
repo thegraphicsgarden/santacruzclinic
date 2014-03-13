@@ -1,0 +1,75 @@
+/* Smartphones (landscape) ----------- */
+@media screen and (max-width: 762px) {
+  .widget ul.columnHeader {
+    display: none; }
+  .widget span.revealSmall {
+    display: inline !important; } }
+ul {
+  list-style: none; }
+
+ul#biometrics {
+  padding-left: 0; }
+
+.clear {
+  clear: both; }
+
+.centered {
+  text-align: center; }
+
+.right-aligned {
+  text-align: right; }
+
+.left-aligned {
+  text-align: left; }
+
+ul.columnHeader {
+  font-weight: bold; }
+
+.show-grid {
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+img#headshot {
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  width: 100%; }
+
+h1#username {
+  margin-top: 0; }
+
+ul.dashboardNav {
+  padding-left: 0; }
+  ul.dashboardNav li {
+    display: inline-block;
+    margin: 5px 10px 2px 0; }
+    ul.dashboardNav li a {
+      cursor: pointer; }
+  ul.dashboardNav li.active {
+    padding: 5px 10px;
+    background: #070716; }
+    ul.dashboardNav li.active a {
+      color: white; }
+
+.widget {
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  padding: 10px 10px 20px 10px;
+  overflow: scroll;
+  max-height: 400px; }
+  .widget span.prompt {
+    position: relative;
+    top: -10px; }
+  .widget span.revealSmall {
+    color: black;
+    display: none; }
+  .widget ul {
+    padding-left: 0; }
+  .widget ul li ul {
+    padding-left: 0; }
+  .widget ul li ul li:nth-child(2n),
+  .widget ul li:nth-child(2n) {
+    background: #ebebeb; }
+  .widget ul input {
+    width: 100%; }
+  .widget a {
+    text-decoration: underline; }

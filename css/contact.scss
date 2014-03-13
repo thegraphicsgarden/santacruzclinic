@@ -1,0 +1,13 @@
+$labelWidth: 100px;
+$fullWidth: 100%;
+$border: 1px rgba(0,0,0,.2) solid;
+
+.contact {
+  label { width: $labelWidth; }
+  textarea { width: $fullWidth; min-height: 300px; }
+  .col-md-6 h2, .col-md-6 p#emailAddress { margin: 0 auto; }
+  img#headshot { 
+  	width: $fullWidth;
+  	border: $border;
+  }
+}

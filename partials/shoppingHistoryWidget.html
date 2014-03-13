@@ -1,0 +1,25 @@
+<div class="col-sm-12 centered">
+	<h2>Shopping History</h2>
+</div>
+<ul ng-repeat="info in patient" class="centered">
+	<li ng-repeat="purchase in info.itemsPurchasedLog">
+		<strong>{{purchase.date}}</strong>
+		<ul class="bold">
+			<li>
+				<div class="row-fluid">
+					<div class="col-xs-8 left-aligned">Items</div>
+					<div class="col-xs-4 left-aligned">Cost</div>
+				</div>
+				<div class="clear"></div>
+			</li>
+		</ul>
+		<ul>
+			<li ng-repeat="item in purchase.items">
+				<div class="row-fluid">
+					<div class="col-xs-8 left-aligned">{{item.quantity}} - {{item.name}}</div>
+					<div class="col-xs-4 left-aligned">{{item.price * item.quantity | currency }}</div>
+				</div>
+				<div class="clear"></div>
+		</li></ul>
+	</li>
+</ul>

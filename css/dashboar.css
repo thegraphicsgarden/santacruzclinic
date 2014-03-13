@@ -1,0 +1,44 @@
+ul {
+  list-style: none; }
+
+ul#biometrics {
+  padding-left: 0; }
+
+.clear {
+  clear: both; }
+
+.centered {
+  text-align: center; }
+
+.right-aligned {
+  text-align: right; }
+
+.left-aligned {
+  text-align: left; }
+
+.bold {
+  font-weight: bold; }
+
+.show-grid {
+  margin-top: 10px;
+  margin-bottom: 20px; }
+
+img#headshot {
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  width: 100%; }
+
+h1#username {
+  margin-top: 0; }
+
+.widget {
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px rgba(0, 0, 0, 0.1) solid;
+  padding: 10px 10px 20px 10px; }
+  .widget ul {
+    padding-left: 0; }
+  .widget ul li ul {
+    padding-left: 0; }
+  .widget ul li ul li:nth-child(2n),
+  .widget ul li:nth-child(2n) {
+    background: whitesmoke; }

@@ -1,0 +1,73 @@
+$border: 1px rgba(0,0,0,.1) solid;
+$widgetCornerRadius: 8px;
+$widgetPadding: 10px 10px 20px 10px;
+$navMenuItemMargin: 5px 10px 2px 0;
+$listAltColorBkg: whitesmoke;
+$listAltColorBkg2: #ebebeb;
+$fullWidth: 100%;
+
+/* Smartphones (landscape) ----------- */
+@media screen and (max-width: 762px){
+	.widget {
+		ul.columnHeader { display: none; }
+		span.revealSmall { display: inline !important; }
+	}
+}
+
+//Nav
+$activeNavItemPadding: 5px 10px;
+$activeNavItemBkg: #070716;
+
+@mixin roundedCorners($radius) {
+	-moz-border-radius: $radius; border-radius: $radius;
+}
+
+ul { list-style: none; }
+ul#biometrics { padding-left: 0; }
+
+.clear { clear: both; }
+.centered { text-align: center; }
+.right-aligned { text-align: right; }
+.left-aligned { text-align: left; }
+ul.columnHeader { font-weight: bold; }
+
+.show-grid { margin-top: 10px; margin-bottom: 20px; }
+
+span#welcome { }
+img#headshot { border: $border; width: $fullWidth;  }
+h1#username { margin-top: 0; }
+
+
+ul.dashboardNav { 
+	padding-left: 0; 
+	li { 
+		display: inline-block;
+		margin: $navMenuItemMargin;
+		a { cursor: pointer; }
+
+	}
+	li.active { 
+		padding: $activeNavItemPadding;
+		background: $activeNavItemBkg; 
+		a {
+			color: white;
+		} 
+	}
+}
+.widget { 
+	@include roundedCorners($widgetCornerRadius); 
+	border: $border; 
+	padding: $widgetPadding; 
+	overflow: scroll;
+	max-height: 400px;
+
+	span.prompt { position: relative; top: -10px; }
+	span.revealSmall { color: black; display: none; }
+
+	ul { padding-left: 0; }
+	ul li ul { padding-left: 0; }
+	ul li ul li:nth-child(2n),
+	ul li:nth-child(2n) { background: $listAltColorBkg2; }
+	ul input { width: $fullWidth; }
+	a { text-decoration: underline; }
+}

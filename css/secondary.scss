@@ -1,0 +1,8 @@
+$pageTopMargin: 80px;
+$pageTopPadding: 20px;
+
+.secondaryPage { 
+	margin: $pageTopMargin auto; 
+	padding: $pageTopPadding;
+	min-height: 500px;
+}

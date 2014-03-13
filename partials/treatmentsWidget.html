@@ -1,0 +1,27 @@
+<div class="col-sm-12 centered">
+	<h2>Treatments</h2>
+</div>
+<ul ng-repeat="info in patient" class="centered">
+	<li ng-repeat="log in info.treatmentLog">
+		<strong>{{log.date}}</strong>
+		<ul class="bold">
+			<li>
+				<div class="row-fluid">
+					<div class="col-xs-3">Treatment</div>	
+					<div class="col-xs-5 right-aligned">Time</div>
+					<div class="col-xs-4 right-aligned">Cost</div>
+				</div><!--row-fluid-->
+				<div class="clear"></div>
+			</li>
+		</ul>
+		<ul><li ng-repeat="treatment in log.treatments">
+			<div class="row-fluid">
+				<div class="col-xs-3 left-aligned">{{treatment.type}}</div>
+				<div class="col-xs-5 right-aligned">{{treatment.duration}} min</div>
+				<div class="col-xs-4 right-aligned">{{ (treatment.duration/60) * treatment.hourlyRate | currency }}</div>
+			</div><!--row-fluid-->
+			<div class="clear"></div>
+		</li></ul>
+	</li>
+</ul>
+<div class="clear"></div>

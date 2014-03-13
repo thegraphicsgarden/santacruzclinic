@@ -1,0 +1,43 @@
+<div class="container secondaryPage">
+	<div class="col-md-3">
+		<div class="row-fluid show-grid">
+			<h1 id="username" ng-repeat="info in patient">{{info.firstname}} {{info.lastname}}!</h1>
+			<img id="headshot" ng-repeat="info in patient" src="./img/{{info.photoURL}}" />
+			<ul id="biometrics" ng-repeat="info in patient">
+				<li>Weighs: {{info.weight}} lbs.</li>
+				<li>Height: {{info.height}} in.</li>
+				<li>Born: {{info.birthdate}}</li>
+				<li>Gender: {{info.gender}}</li>	
+			</ul>
+
+			<p>NowHey!</p>
+			<ul ng-repeat="(key,value) in user[0]"> 
+		            <li>{{key}} : {{value}}</li>      
+		     </ul>  
+		</div><!--row-->
+	</div><!--col-sm-3-->
+
+	<div class="col-md-9 patientInfo">
+		<div class="row-fluid show-grid">
+			<ul class="dashboardNav">
+				<li ng-class="dietActive">
+					<a ng-click="setActive('diet')">Diet</a></li>
+				<li ng-class="treatmentsActive">
+					<a ng-click="setActive('treatments')">Treatments</a></li>
+				<li ng-class="appointmentsActive">
+					<a ng-click="setActive('appointments')">Schedule Appointment</a></li>
+				<li ng-class="shoppingActive">
+					<a ng-click="setActive('shopping')">Shopping History</a></li>
+				<li ng-class="helpfulActive">
+					<a ng-click="setActive('helpful')">Helpful Links</a></li>
+			</ul>
+			<div class="row-fluid show-grid">
+				<div class="widget" ng-include src="dieteticsURL" ng-show="dietDisplay"></div>
+				<div class="widget" ng-include src="treatmentsURL" ng-show="treatmentsDisplay"></div>
+				<div class="widget" ng-include src="appointmentsURL" ng-show="appointmentsDisplay"></div>
+				<div class="widget" ng-include src="shoppingHistoryWidgetURL" ng-show="shoppingDisplay"></div>
+				<div class="widget" ng-include src="helpfulLinksURL" ng-show="helpfulDisplay"></div>				
+			</div><!--row-->
+		</div><!--row-fluid show-grid-->
+	</div><!--col-sm-9-->
+</div>
